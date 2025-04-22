@@ -1,10 +1,11 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "api/scrape.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/api/scrape", "dest": "/api/scrape.js" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    { "src": "api/scrape.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/scrape", "dest": "/api/scrape.js" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ],
+  "outputDirectory": "public"
+}

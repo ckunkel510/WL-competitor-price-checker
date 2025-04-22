@@ -5,7 +5,7 @@
   ],
   "routes": [
     { "src": "/api/scrape", "dest": "/api/scrape.js" },
-    { "src": "/(.*)", "dest": "/public/$1" }
-  ],
-  "outputDirectory": "public"
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
 }
